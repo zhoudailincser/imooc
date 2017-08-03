@@ -2,3 +2,4 @@
 \.sass-cache
 \dist
 \src
+package-lock.json

@@ -1,0 +1,85 @@
+//常规设置
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+//画布相对定位设置宽高，设置3d透视距离
+div.wrap {
+    width: 80%;
+    height: 80%;
+    margin: 5% auto 0;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+div.wrap_photo {
+    background-color: rgb(237, 217, 32);
+    width: 100%;
+    height: 100%;
+}
+
+//设置photo大小，设置旋转效果
+div.photo {
+    width: 20%;
+    height: 70%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    position: absolute;
+    color: #fff; // 正面
+    .front {
+        font-size: 1vw;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border: 5px solid #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background-color: rgb(223, 255, 65);
+        overflow: hidden;
+    } // 背面
+    .back {
+        border: 5px solid #fff;
+        position: absolute;
+        overflow: hidden;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background-color: rgb(223, 255, 65);
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    } // 图片
+    img {
+        display: block;
+        padding: 10%;
+        margin: 15% auto;
+        width: 80%;
+        height: auto;
+    }
+}
+
+//控制区域
+div.nav {
+    width: 60%;
+    text-align: center;
+    position: absolute;
+    left: 20%;
+    bottom: 3%;
+    z-index: 20;
+    i {
+        margin: 5px;
+    }
+}
