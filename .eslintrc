@@ -1,0 +1,7 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    //关闭分号结束提示
+    "semi": 0
+  }
+}
